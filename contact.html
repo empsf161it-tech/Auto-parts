@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Auto Parts — Master Tech Support & Customer Care</title>
+  <meta name="description" content="Get in touch with Auto Parts. Contact our master mechanics for fitment inquiries, wholesale fleet orders, order tracking, and warehouse pickup.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f95716'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" id="brand-logo" aria-label="Auto Parts Home">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+        <span class="brand-badge">SUPPORT</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu-desktop">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL Direction" title="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="btn-icon theme-toggle-btn theme-toggle-desktop" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <a href="shop.html" class="btn-icon" aria-label="View Shopping Cart" title="View Cart" style="position: relative;">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span class="cart-counter-badge" style="position: absolute; top: -5px; inset-inline-end: -5px; background: var(--color-accent); color: #fff; font-size: 0.7rem; font-weight: 700; width: 18px; height: 18px; border-radius: var(--radius-global); display: inline-flex; align-items: center; justify-content: center;">2</span>
+        </a>
+        <a href="login.html" class="btn btn-primary" id="nav-login-btn">Login</a>
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Open Navigation Menu">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE DRAWER -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+      </a>
+      <button class="drawer-close-btn" id="drawer-close" aria-label="Close Navigation Drawer">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ri-dashboard-2-line"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ri-tools-line"></i> Services</a></li>
+      <li><a href="shop.html" class="drawer-link"><i class="ri-store-2-line"></i> Shop Catalog</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ri-article-line"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link active"><i class="ri-mail-line"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ri-speed-up-line"></i> Dashboard</a></li>
+      <li><a href="login.html" class="drawer-link"><i class="ri-login-box-line"></i> Login</a></li>
+    </ul>
+    <div class="drawer-controls">
+      <div class="drawer-control-row">
+        <span>Dark / Light Mode</span>
+        <button class="btn-icon theme-toggle-btn" aria-label="Toggle Theme in Drawer">
+          <i class="ri-moon-line"></i>
+        </button>
+      </div>
+      <div class="drawer-control-row">
+        <span>Toggle RTL (⇄)</span>
+        <button class="btn-icon rtl-toggle-btn" aria-label="Toggle RTL in Drawer">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- CONTACT HERO -->
+    <section class="section section-surface" style="padding-block: var(--space-8); text-align: center; border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-tag"><i class="ri-customer-service-2-line"></i> Direct Master Mechanic Support</div>
+        <h1 style="font-size: var(--size-h1); font-weight: var(--weight-h1); margin-bottom: var(--space-2);">Get in Touch With Our Specialists</h1>
+        <p class="lead" style="max-width: 650px; margin-inline: auto;">
+          Whether you need chassis fitment verification, a wholesale commercial account, or installation support, our technicians are standing by.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT CHANNELS CARDS -->
+    <section class="section" id="contact-channels">
+      <div class="container">
+        <div class="services-grid" style="margin-bottom: var(--space-6);">
+          <div class="card">
+            <div class="card-icon"><i class="ri-phone-line"></i></div>
+            <h3 class="card-title">Phone Hotline</h3>
+            <p class="card-text">Direct line to our ASE-certified technical support desk.</p>
+            <strong style="color: var(--color-accent); font-family: var(--font-heading); font-size: 1.25rem;">+1-800-555-AUTO</strong>
+            <span style="font-size: var(--size-caption); color: var(--text-muted); margin-top: 4px;">Mon - Fri: 8am - 8pm EST</span>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ri-mail-send-line"></i></div>
+            <h3 class="card-title">Email Inquiries</h3>
+            <p class="card-text">Send your VIN, photos, and spec sheets for rapid verification.</p>
+            <strong style="color: var(--color-accent); font-family: var(--font-heading); font-size: 1.1rem;">support@autoparts.com</strong>
+            <span style="font-size: var(--size-caption); color: var(--text-muted); margin-top: 4px;">Average response time: &lt; 2 Hours</span>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ri-map-pin-line"></i></div>
+            <h3 class="card-title">Global Headquarters</h3>
+            <p class="card-text">Central Distribution & Engineering Dyno Facility.</p>
+            <strong style="color: var(--text-main); font-size: 0.95rem;">400 Performance Way, Detroit, MI 48201</strong>
+            <span style="font-size: var(--size-caption); color: var(--text-muted); margin-top: 4px;">Will-Call Pickup Available</span>
+          </div>
+        </div>
+
+        <!-- FORM & MAP SPLIT -->
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-5); align-items: start;">
+          <!-- CLIENT-SIDE VALIDATED FORM (STEP 9.6 & 12) -->
+          <div class="card" style="align-items: stretch; text-align: start; padding: var(--space-5);">
+            <div style="text-align: center; margin-bottom: var(--space-4);">
+              <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: 4px;">Send a Direct Technical Message</h2>
+              <p style="font-size: var(--size-label); color: var(--text-muted);">Please provide your vehicle details so we can answer accurately.</p>
+            </div>
+
+            <form id="contact-form" data-validate="true" data-success-msg="Your message has been received! A certified technician will reply within 2 hours.">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); margin-bottom: var(--space-2);">
+                <div class="form-field">
+                  <label style="font-size: var(--size-caption); font-weight: 500;">Full Name *</label>
+                  <input type="text" class="form-control" name="name" required placeholder="Alex Turner">
+                  <span class="error-msg"></span>
+                </div>
+                <div class="form-field">
+                  <label style="font-size: var(--size-caption); font-weight: 500;">Email Address *</label>
+                  <input type="email" class="form-control" name="email" required placeholder="alex@turner-racing.com">
+                  <span class="error-msg"></span>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); margin-bottom: var(--space-2);">
+                <div class="form-field">
+                  <label style="font-size: var(--size-caption); font-weight: 500;">Vehicle (Year / Make / Model)</label>
+                  <input type="text" class="form-control" name="vehicle" placeholder="e.g. 2024 BMW M3 G80">
+                  <span class="error-msg"></span>
+                </div>
+                <div class="form-field">
+                  <label style="font-size: var(--size-caption); font-weight: 500;">Inquiry Type *</label>
+                  <select class="form-control" name="inquiry_type" required>
+                    <option value="">Select Category</option>
+                    <option value="fitment">Fitment Verification</option>
+                    <option value="order">Order Tracking & Shipping</option>
+                    <option value="dyno">Dyno Tuning & Machining</option>
+                    <option value="wholesale">Commercial Fleet / Wholesale</option>
+                    <option value="returns">Warranty & Returns</option>
+                  </select>
+                  <span class="error-msg"></span>
+                </div>
+              </div>
+
+              <div class="form-field" style="margin-bottom: var(--space-3);">
+                <label style="font-size: var(--size-caption); font-weight: 500;">Your Message / Part Query *</label>
+                <textarea class="form-control" name="message" rows="5" required placeholder="Provide part numbers, chassis codes, or symptoms..." style="height: auto; padding-top: var(--space-1);"></textarea>
+                <span class="error-msg"></span>
+              </div>
+
+              <div class="form-field" style="margin-bottom: var(--space-3);">
+                <label class="form-checkbox">
+                  <input type="checkbox" name="terms" required>
+                  <span>I agree to receive technical fitment follow-up and agree to the Privacy Policy.</span>
+                </label>
+                <span class="error-msg"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                <i class="ri-send-plane-2-line"></i> Submit Technical Inquiry
+              </button>
+              <div class="form-feedback" style="margin-top: var(--space-2);"></div>
+            </form>
+          </div>
+
+          <!-- MAP PLACEHOLDER & FACILITY DETAILS -->
+          <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+            <div class="card" style="padding: 0; overflow: hidden; align-items: stretch; text-align: start;">
+              <!-- Interactive-looking map placeholder with styled coordinates overlay -->
+              <div style="height: 320px; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); position: relative; display: flex; align-items: center; justify-content: center; color: #fff; overflow: hidden;">
+                <div style="position: absolute; inset: 0; opacity: 0.15; background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 16px 16px;"></div>
+                <div style="position: relative; z-index: 2; text-align: center; padding: var(--space-3);">
+                  <div style="width: 64px; height: 64px; border-radius: var(--radius-global); background: var(--color-accent); display: inline-flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: var(--space-2); box-shadow: 0 0 20px rgba(249, 87, 22, 0.6);">
+                    <i class="ri-map-pin-2-fill"></i>
+                  </div>
+                  <h3 style="color: #fff; font-size: var(--size-h4); margin-bottom: 4px;">Detroit Fulfillment & Dyno Center</h3>
+                  <p style="color: #94a3b8; font-size: var(--size-caption); margin-bottom: var(--space-2);">42.3314° N, 83.0458° W • 120,000 Sq Ft Facility</p>
+                  <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="color: #fff; border-color: rgba(255,255,255,0.3);">
+                    <i class="ri-navigation-line"></i> Open in Google Maps
+                  </a>
+                </div>
+              </div>
+              <div style="padding: var(--space-3);">
+                <h4 style="font-size: var(--size-body); font-weight: var(--weight-h4); margin-bottom: 6px;">Will-Call & Customer Counter Hours</h4>
+                <p style="font-size: var(--size-label); color: var(--text-muted); margin-bottom: 4px;">• Monday - Friday: 7:00 AM – 6:30 PM EST</p>
+                <p style="font-size: var(--size-label); color: var(--text-muted); margin-bottom: 4px;">• Saturday (Dyno Sessions): 8:00 AM – 2:00 PM EST</p>
+                <p style="font-size: var(--size-label); color: var(--text-muted); margin: 0;">• Sunday: Closed for Track Testing</p>
+              </div>
+            </div>
+
+            <!-- Social Links Card -->
+            <div class="card" style="padding: var(--space-3); align-items: center; text-align: center;">
+              <h4 style="font-size: var(--size-body); font-weight: var(--weight-h4); margin-bottom: var(--space-1);">Connect With Our Racing Community</h4>
+              <p style="font-size: var(--size-caption); color: var(--text-muted); margin-bottom: var(--space-2);">Follow behind-the-scenes dyno pulls, build reveals, and track days.</p>
+              <div style="display: flex; gap: var(--space-2);">
+                <a href="https://youtube.com" class="btn-icon" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                <a href="https://instagram.com" class="btn-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                <a href="https://facebook.com" class="btn-icon" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                <a href="https://twitter.com" class="btn-icon" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-1);">
+            <i class="ri-steering-2-fill"></i>
+            <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+          </a>
+          <p style="font-size: var(--size-label);">The definitive catalog for automotive enthusiasts, professional racing builders, and fleet operators.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="shop.html" class="footer-link">Shop Catalog</a></li>
+            <li><a href="blog.html" class="footer-link">Technical Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?cat=engine" class="footer-link">Engine Parts</a></li>
+            <li><a href="shop.html?cat=brakes" class="footer-link">Brake Systems</a></li>
+            <li><a href="shop.html?cat=suspension" class="footer-link">Suspension & Steering</a></li>
+            <li><a href="shop.html?cat=batteries" class="footer-link">Batteries</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Immediate Support</h4>
+          <p style="font-size: var(--size-caption);">Have an urgent trackside breakdown?</p>
+          <div style="font-size: var(--size-label); color: var(--color-accent); font-weight: 500;">
+            <i class="ri-phone-line"></i> 1-800-555-AUTO
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Auto Parts Inc. All rights reserved. High-Performance Automotive E-Commerce Template.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

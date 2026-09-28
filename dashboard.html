@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Auto Parts Command Center</title>
+  <meta name="description" content="Auto Parts Admin & User Dashboard. Manage orders, parts inventory, customer accounts, digital garage vehicles, and analytics.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f95716'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
+</head>
+<body>
+
+  <!-- SITE HEADER (STEP 4) -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" id="brand-logo" aria-label="Auto Parts Home">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+        <span class="brand-badge">PORTAL</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu-desktop">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL Direction" title="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="btn-icon theme-toggle-btn theme-toggle-desktop" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <a href="shop.html" class="btn-icon" aria-label="View Shopping Cart" title="View Cart" style="position: relative;">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span class="cart-counter-badge" style="position: absolute; top: -5px; inset-inline-end: -5px; background: var(--color-accent); color: #fff; font-size: 0.7rem; font-weight: 700; width: 18px; height: 18px; border-radius: var(--radius-global); display: inline-flex; align-items: center; justify-content: center;">2</span>
+        </a>
+        <a href="login.html" class="btn btn-primary" id="nav-login-btn">Login</a>
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Open Navigation Menu">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE DRAWER -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+      </a>
+      <button class="drawer-close-btn" id="drawer-close" aria-label="Close Navigation Drawer">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ri-dashboard-2-line"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ri-tools-line"></i> Services</a></li>
+      <li><a href="shop.html" class="drawer-link"><i class="ri-store-2-line"></i> Shop Catalog</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ri-article-line"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ri-mail-line"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link active"><i class="ri-speed-up-line"></i> Dashboard</a></li>
+      <li><a href="login.html" class="drawer-link"><i class="ri-login-box-line"></i> Login</a></li>
+    </ul>
+    <div class="drawer-controls">
+      <div class="drawer-control-row">
+        <span>Dark / Light Mode</span>
+        <button class="btn-icon theme-toggle-btn" aria-label="Toggle Theme in Drawer">
+          <i class="ri-moon-line"></i>
+        </button>
+      </div>
+      <div class="drawer-control-row">
+        <span>Toggle RTL (⇄)</span>
+        <button class="btn-icon rtl-toggle-btn" aria-label="Toggle RTL in Drawer">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- DASHBOARD MAIN LAYOUT (STEP 9.9) -->
+  <main class="dashboard-layout" id="dashboard-main">
+    
+    <!-- SIDEBAR WITH VIEW SWITCHER -->
+    <aside class="dashboard-sidebar">
+      <div class="dashboard-role-badge">
+        <i class="ri-shield-user-line"></i>
+        <span id="current-role-label">Admin Console</span>
+      </div>
+
+      <!-- Role Switcher Button -->
+      <button class="btn btn-outline btn-sm" id="role-toggle-btn" style="width: 100%; margin-bottom: var(--space-3); justify-content: flex-start;">
+        <i class="ri-user-line"></i> Switch to User View
+      </button>
+
+      <!-- ADMIN SIDEBAR LINKS -->
+      <div id="admin-sidebar-nav" class="dashboard-panel" style="display: flex; flex-direction: column; gap: 4px;">
+        <button class="dashboard-nav-item active" data-target="admin-overview">
+          <i class="ri-dashboard-line"></i> Overview & KPIs
+        </button>
+        <button class="dashboard-nav-item" data-target="admin-orders">
+          <i class="ri-shopping-basket-line"></i> Orders & Shipments
+        </button>
+        <button class="dashboard-nav-item" data-target="admin-users">
+          <i class="ri-team-line"></i> User Management
+        </button>
+        <button class="dashboard-nav-item" data-target="admin-content">
+          <i class="ri-folders-line"></i> Content & Catalog
+        </button>
+        <button class="dashboard-nav-item" data-target="admin-messages">
+          <i class="ri-message-3-line"></i> Messages & Alerts
+        </button>
+        <button class="dashboard-nav-item" data-target="admin-analytics">
+          <i class="ri-line-chart-line"></i> Reports & Analytics
+        </button>
+        <button class="dashboard-nav-item" data-target="admin-settings">
+          <i class="ri-settings-line"></i> Configuration
+        </button>
+      </div>
+
+      <!-- USER SIDEBAR LINKS (HIDDEN IN ADMIN VIEW) -->
+      <div id="user-sidebar-nav" class="dashboard-panel" style="display: none; flex-direction: column; gap: 4px;">
+        <button class="dashboard-nav-item active" data-target="user-profile">
+          <i class="ri-user-settings-line"></i> Profile Management
+        </button>
+        <button class="dashboard-nav-item" data-target="user-garage">
+          <i class="ri-car-line"></i> My Garage (Vehicles)
+        </button>
+        <button class="dashboard-nav-item" data-target="user-orders">
+          <i class="ri-history-line"></i> Order History
+        </button>
+        <button class="dashboard-nav-item" data-target="user-saved">
+          <i class="ri-bookmark-line"></i> Saved Parts List
+        </button>
+        <button class="dashboard-nav-item" data-target="user-messages">
+          <i class="ri-mail-line"></i> Direct Messages
+        </button>
+        <button class="dashboard-nav-item" data-target="user-settings">
+          <i class="ri-settings-4-line"></i> Account Settings
+        </button>
+        <a href="login.html" class="dashboard-nav-item" style="color: var(--color-error); margin-top: var(--space-2);">
+          <i class="ri-logout-box-r-line"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- CONTENT DISPLAY AREA -->
+    <section class="dashboard-content">
+      
+      <!-- ==================== ADMIN PANEL ==================== -->
+      <div id="panel-admin" class="dashboard-panel">
+        
+        <!-- ADMIN 1: OVERVIEW & STATISTICS -->
+        <div id="admin-overview" class="dashboard-tab-content">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
+            <div>
+              <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: 2px;">Operations Overview</h2>
+              <p style="font-size: var(--size-label); color: var(--text-muted); margin: 0;">Real-time dispatch metrics, sales velocity, and inventory alerts.</p>
+            </div>
+            <button class="btn btn-primary btn-sm"><i class="ri-download-2-line"></i> Export PDF Report</button>
+          </div>
+
+          <!-- KPI Cards (Step 9.9) -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span>Total Monthly Revenue</span>
+                <i class="ri-money-dollar-circle-line" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+              </div>
+              <div class="kpi-value">$428,950</div>
+              <div class="kpi-trend"><i class="ri-arrow-up-line"></i> +14.2% vs last month</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span>Active Orders Dispatched</span>
+                <i class="ri-truck-line" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+              </div>
+              <div class="kpi-value">1,428</div>
+              <div class="kpi-trend"><i class="ri-arrow-up-line"></i> 99.8% on-time rate</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span>Registered Vehicles in Garage</span>
+                <i class="ri-car-line" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+              </div>
+              <div class="kpi-value">84,210</div>
+              <div class="kpi-trend"><i class="ri-arrow-up-line"></i> +840 this week</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span>Low Stock Threshold Items</span>
+                <i class="ri-alert-line" style="font-size: 1.5rem; color: var(--color-error);"></i>
+              </div>
+              <div class="kpi-value">12</div>
+              <div class="kpi-trend" style="color: var(--color-error);"><i class="ri-error-warning-line"></i> Reorder required</div>
+            </div>
+          </div>
+
+          <!-- Recent Orders Quick Table -->
+          <div style="margin-top: var(--space-4);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-2);">
+              <h3 style="font-size: var(--size-h4); font-weight: var(--weight-h4); margin: 0;">Live Orders Stream</h3>
+              <input type="text" id="order-search-input" class="form-control" placeholder="Search Order ID or Customer..." style="width: 260px; height: 36px; font-size: var(--size-caption);">
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table orders-table" aria-label="Recent Orders">
+                <thead>
+                  <tr>
+                    <th>Order #</th>
+                    <th>Customer</th>
+                    <th>Vehicle Application</th>
+                    <th>Parts Summary</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#ORD-9842</strong></td>
+                    <td>Julian Vance</td>
+                    <td>2024 BMW M3 (G80)</td>
+                    <td>Apex Carbon-Ceramic Caliper Kit</td>
+                    <td>$1,849.00</td>
+                    <td><span style="color: var(--color-success); font-weight: 500;"><i class="ri-checkbox-circle-fill"></i> Shipped</span></td>
+                    <td><button class="btn btn-outline btn-sm">Details</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#ORD-9841</strong></td>
+                    <td>Elena Rostova</td>
+                    <td>2023 Porsche GT4 RS</td>
+                    <td>Veloce Track Inverted Coilovers</td>
+                    <td>$1,290.00</td>
+                    <td><span style="color: #f59e0b; font-weight: 500;"><i class="ri-time-fill"></i> Processing</span></td>
+                    <td><button class="btn btn-outline btn-sm">Details</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#ORD-9840</strong></td>
+                    <td>Marcus Turner</td>
+                    <td>2022 Toyota Supra GR</td>
+                    <td>Titan Stage 2 Twin-Scroll Turbo</td>
+                    <td>$2,450.00</td>
+                    <td><span style="color: var(--color-success); font-weight: 500;"><i class="ri-checkbox-circle-fill"></i> Delivered</span></td>
+                    <td><button class="btn btn-outline btn-sm">Details</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#ORD-9839</strong></td>
+                    <td>Vance Motorsport LLC</td>
+                    <td>Fleet (Ford Mustang GT)</td>
+                    <td>Billet Alternator + Racing Plugs</td>
+                    <td>$980.00</td>
+                    <td><span style="color: var(--color-success); font-weight: 500;"><i class="ri-checkbox-circle-fill"></i> Shipped</span></td>
+                    <td><button class="btn btn-outline btn-sm">Details</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADMIN 2: USER MANAGEMENT -->
+        <div id="admin-users" class="dashboard-tab-content" style="display: none;">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">User Accounts & Permissions</h2>
+          <p style="color: var(--text-muted); margin-bottom: var(--space-4);">Manage customer profiles, trade discounts, and wholesale garage approvals.</p>
+          <div class="table-responsive">
+            <table class="data-table" aria-label="User accounts">
+              <thead>
+                <tr>
+                  <th>User ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Tier</th>
+                  <th>Registered Cars</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>USR-1082</td>
+                  <td>Alexander Wright</td>
+                  <td>alex.w@racingdynamics.com</td>
+                  <td><span class="brand-badge">Wholesale Pro</span></td>
+                  <td>4 Vehicles</td>
+                  <td><span style="color: var(--color-success);">Active</span></td>
+                </tr>
+                <tr>
+                  <td>USR-1083</td>
+                  <td>David Sterling</td>
+                  <td>sterling@performance.net</td>
+                  <td>Track Member</td>
+                  <td>2 Vehicles</td>
+                  <td><span style="color: var(--color-success);">Active</span></td>
+                </tr>
+                <tr>
+                  <td>USR-1084</td>
+                  <td>Marcus Chen</td>
+                  <td>m.chen@apexclub.com</td>
+                  <td>Retail Driver</td>
+                  <td>1 Vehicle</td>
+                  <td><span style="color: var(--color-success);">Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ADMIN 3: ORDERS / BOOKINGS -->
+        <div id="admin-orders" class="dashboard-tab-content" style="display: none;">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">Comprehensive Order Log</h2>
+          <p style="color: var(--text-muted); margin-bottom: var(--space-4);">Track warehouse fulfillment queues, freight tracking numbers, and custom dyno bookings.</p>
+          <div class="table-responsive">
+            <table class="data-table" aria-label="All Orders">
+              <thead>
+                <tr>
+                  <th>Tracking #</th>
+                  <th>Carrier</th>
+                  <th>Destination</th>
+                  <th>Date</th>
+                  <th>Fitment Validated</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1Z9999999999999999</td>
+                  <td>FedEx Express Priority</td>
+                  <td>Chicago, IL, US</td>
+                  <td>Oct 14, 2026</td>
+                  <td><span style="color: var(--color-success);"><i class="ri-check-line"></i> Passed VIN Scan</span></td>
+                </tr>
+                <tr>
+                  <td>1Z8888888888888888</td>
+                  <td>DHL Air Cargo</td>
+                  <td>Stuttgart, Germany</td>
+                  <td>Oct 13, 2026</td>
+                  <td><span style="color: var(--color-success);"><i class="ri-check-line"></i> Passed VIN Scan</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ADMIN 4: CONTENT & CATALOG -->
+        <div id="admin-content" class="dashboard-tab-content" style="display: none;">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">Parts Catalog & Content Management</h2>
+          <p style="color: var(--text-muted); margin-bottom: var(--space-4);">Update prices, add new SKUs, modify technical bulletins, or edit cross-reference compatibility tables.</p>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3);">
+            <div class="card">
+              <div class="card-icon"><i class="ri-add-box-line"></i></div>
+              <h4 class="card-title">Add New Auto Part</h4>
+              <p class="card-text">Upload CAD specs, SKU, OEM cross-reference, and retail price.</p>
+              <button class="btn btn-primary btn-sm">Create Listing</button>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="ri-file-edit-line"></i></div>
+              <h4 class="card-title">Technical Bulletins</h4>
+              <p class="card-text">Publish torque spec advisories and installation manuals.</p>
+              <button class="btn btn-outline btn-sm">Manage Articles</button>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="ri-database-2-line"></i></div>
+              <h4 class="card-title">VIN Fitment Sync</h4>
+              <p class="card-text">Re-index manufacturer chassis data and engine codes.</p>
+              <button class="btn btn-outline btn-sm">Trigger Sync</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADMIN 5: MESSAGES & NOTIFICATIONS -->
+        <div id="admin-messages" class="dashboard-tab-content" style="display: none;">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">Support Inquiries & Notifications</h2>
+          <div class="card alert-item" style="margin-bottom: var(--space-2); text-align: start; align-items: flex-start; flex-direction: row; justify-content: space-between;">
+            <div>
+              <strong style="color: var(--color-accent); font-size: var(--size-label);">Fitment Query from Carlos Santana:</strong>
+              <p style="font-size: var(--size-caption); color: var(--text-muted); margin: 4px 0 0 0;">"Does the Apex 6-piston caliper clear 18-inch Apex RT-01 wheels without spacers?"</p>
+            </div>
+            <button class="btn btn-outline btn-sm btn-dismiss-alert">Reply & Resolve</button>
+          </div>
+        </div>
+
+        <!-- ADMIN 6: REPORTS & ANALYTICS -->
+        <div id="admin-analytics" class="dashboard-tab-content" style="display: none;">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">Analytics & Performance Velocity</h2>
+          <p style="color: var(--text-muted); margin-bottom: var(--space-4);">Top performing product categories by sales volume this quarter.</p>
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-global); padding: var(--space-4);">
+            <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: var(--size-label); margin-bottom: 4px;">
+                  <span>1. Brake Systems (Discs, Calipers, Lines)</span>
+                  <strong>38% ($162,000)</strong>
+                </div>
+                <div style="height: 10px; background: var(--bg-surface-elevated); border-radius: var(--radius-global); overflow: hidden;">
+                  <div style="width: 38%; height: 100%; background: var(--color-accent);"></div>
+                </div>
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: var(--size-label); margin-bottom: 4px;">
+                  <span>2. Engine Parts & Forced Induction</span>
+                  <strong>29% ($124,000)</strong>
+                </div>
+                <div style="height: 10px; background: var(--bg-surface-elevated); border-radius: var(--radius-global); overflow: hidden;">
+                  <div style="width: 29%; height: 100%; background: var(--color-secondary);"></div>
+                </div>
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: var(--size-label); margin-bottom: 4px;">
+                  <span>3. Suspension & Steering Coilovers</span>
+                  <strong>21% ($90,000)</strong>
+                </div>
+                <div style="height: 10px; background: var(--bg-surface-elevated); border-radius: var(--radius-global); overflow: hidden;">
+                  <div style="width: 21%; height: 100%; background: var(--color-primary-light);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADMIN 7: SETTINGS & CONFIGURATION -->
+        <div id="admin-settings" class="dashboard-tab-content" style="display: none;">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">Store & API Configuration</h2>
+          <div class="card" style="align-items: flex-start; text-align: start; max-width: 600px;">
+            <div class="form-field" style="margin-bottom: var(--space-3); width: 100%;">
+              <label style="font-size: var(--size-label); font-weight: 500;">Store Contact Email</label>
+              <input type="email" class="form-control" value="orders@autoparts.com">
+            </div>
+            <div class="form-field" style="margin-bottom: var(--space-3); width: 100%;">
+              <label style="font-size: var(--size-label); font-weight: 500;">Automated Dispatch Window</label>
+              <select class="form-control">
+                <option selected>Same Day before 4:00 PM EST</option>
+                <option>Next Business Day</option>
+              </select>
+            </div>
+            <button class="btn btn-primary">Save System Settings</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==================== USER PANEL ==================== -->
+      <div id="panel-user" class="dashboard-panel" style="display: none;">
+        
+        <!-- USER 1: PROFILE MANAGEMENT -->
+        <div id="user-profile" class="dashboard-tab-content">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">Profile & Driver Garage</h2>
+          <p style="color: var(--text-muted); margin-bottom: var(--space-4);">Manage your saved shipping addresses, vehicle telemetry, and notification preferences.</p>
+          
+          <div class="card" style="align-items: flex-start; text-align: start; max-width: 640px;">
+            <div style="display: flex; gap: var(--space-3); align-items: center; margin-bottom: var(--space-4);">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Profile Picture" style="width: 72px; height: 72px; border-radius: var(--radius-global); object-fit: cover; border: 2px solid var(--color-accent);">
+              <div>
+                <h3 style="font-size: var(--size-h4); margin: 0;">Elena Rostova</h3>
+                <span style="font-size: var(--size-caption); color: var(--color-accent);">Track Member • ID: #DRV-8421</span>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); width: 100%; margin-bottom: var(--space-3);">
+              <div class="form-field">
+                <label style="font-size: var(--size-caption);">First Name</label>
+                <input type="text" class="form-control" value="Elena">
+              </div>
+              <div class="form-field">
+                <label style="font-size: var(--size-caption);">Last Name</label>
+                <input type="text" class="form-control" value="Rostova">
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-sm">Update Driver Profile</button>
+          </div>
+        </div>
+
+        <!-- USER 2: MY GARAGE (VEHICLE PROFILES) -->
+        <div id="user-garage" class="dashboard-tab-content" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
+            <div>
+              <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin: 0;">My Registered Garage</h2>
+              <p style="color: var(--text-muted); font-size: var(--size-label); margin: 0;">Parts across our store will be automatically checked against these vehicles.</p>
+            </div>
+            <button class="btn btn-primary btn-sm"><i class="ri-add-line"></i> Add Vehicle</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);">
+            <div class="card" style="align-items: flex-start; text-align: start;">
+              <span class="product-badge" style="position: static; margin-bottom: var(--space-1);">Primary Track Vehicle</span>
+              <h3 style="font-size: var(--size-h4); margin-bottom: 2px;">2024 BMW M3 Competition (G80)</h3>
+              <p style="font-size: var(--size-caption); color: var(--text-muted); margin-bottom: var(--space-2);">Engine: 3.0L S58 Twin-Turbo • VIN: WBS33AY08RF29****</p>
+              <div style="font-size: var(--size-caption); color: var(--color-success);"><i class="ri-checkbox-circle-line"></i> Guaranteed Fitment Active</div>
+            </div>
+
+            <div class="card" style="align-items: flex-start; text-align: start;">
+              <span class="product-badge" style="position: static; background: var(--color-secondary); margin-bottom: var(--space-1);">Daily Driver</span>
+              <h3 style="font-size: var(--size-h4); margin-bottom: 2px;">2023 Porsche Cayman GT4 RS</h3>
+              <p style="font-size: var(--size-caption); color: var(--text-muted); margin-bottom: var(--space-2);">Engine: 4.0L Boxer-6 • VIN: WP0AF2A82PS21****</p>
+              <div style="font-size: var(--size-caption); color: var(--color-success);"><i class="ri-checkbox-circle-line"></i> Guaranteed Fitment Active</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- USER 3: ORDER HISTORY -->
+        <div id="user-orders" class="dashboard-tab-content" style="display: none;">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">Order History & Tracking</h2>
+          <div class="table-responsive">
+            <table class="data-table" aria-label="Customer Orders">
+              <thead>
+                <tr>
+                  <th>Order #</th>
+                  <th>Date</th>
+                  <th>Items</th>
+                  <th>Total</th>
+                  <th>Tracking</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#ORD-9842</td>
+                  <td>Oct 14, 2026</td>
+                  <td>Apex Carbon Ceramic Calipers (Pair)</td>
+                  <td>$1,849.00</td>
+                  <td><a href="#" style="color: var(--color-accent);"><i class="ri-external-link-line"></i> Track FedEx</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- USER 4: SAVED ITEMS -->
+        <div id="user-saved" class="dashboard-tab-content" style="display: none;">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">Saved Wishlist Items</h2>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);">
+            <div class="card" style="flex-direction: row; gap: var(--space-2); text-align: start; align-items: center;">
+              <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=200&q=80" alt="Veloce Coilovers" style="width: 80px; height: 80px; object-fit: cover;">
+              <div style="flex-grow: 1;">
+                <h4 style="font-size: var(--size-label); margin: 0;">Veloce Track Inverted Coilovers</h4>
+                <div style="color: var(--color-accent); font-weight: 540;">$1,290.00</div>
+              </div>
+              <button class="btn btn-primary btn-sm btn-add-cart" data-name="Veloce Track Coilovers">Move to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- USER 5: MESSAGES -->
+        <div id="user-messages" class="dashboard-tab-content" style="display: none;">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">Technical Mechanic Chat</h2>
+          <div class="card" style="padding: var(--space-3); text-align: start; align-items: flex-start;">
+            <div style="display: flex; gap: var(--space-2); margin-bottom: var(--space-2);">
+              <i class="ri-user-star-line" style="color: var(--color-accent); font-size: 1.5rem;"></i>
+              <div>
+                <strong>Master Mechanic Marcus:</strong>
+                <p style="font-size: var(--size-caption); color: var(--text-muted); margin: 0;">"Hi Elena! Your G80 track brake calipers cleared quality testing this morning. Shipped with FedEx express."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- USER 6: SETTINGS -->
+        <div id="user-settings" class="dashboard-tab-content" style="display: none;">
+          <h2 style="font-size: var(--size-h3); font-weight: var(--weight-h3); margin-bottom: var(--space-2);">Account Preferences</h2>
+          <div class="card" style="align-items: flex-start; text-align: start; max-width: 500px;">
+            <label class="form-checkbox" style="margin-bottom: var(--space-2);">
+              <input type="checkbox" checked>
+              <span>Receive SMS tracking notifications for parts dispatch</span>
+            </label>
+            <label class="form-checkbox" style="margin-bottom: var(--space-3);">
+              <input type="checkbox" checked>
+              <span>Notify me when parts matching my Garage go on seasonal sale</span>
+            </label>
+            <button class="btn btn-primary btn-sm">Save Preferences</button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

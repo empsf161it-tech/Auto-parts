@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon — Auto Parts Next-Gen Telemetry & Race Hub</title>
+  <meta name="description" content="Our next-generation AI parts fitment engine, live dynamometer reservation portal, and carbon titanium catalog launch in 24 days.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f95716'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" id="brand-logo" aria-label="Auto Parts Home">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+        <span class="brand-badge">BETA</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu-desktop">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL Direction" title="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="btn-icon theme-toggle-btn theme-toggle-desktop" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <a href="shop.html" class="btn-icon" aria-label="View Shopping Cart" title="View Cart" style="position: relative;">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span class="cart-counter-badge" style="position: absolute; top: -5px; inset-inline-end: -5px; background: var(--color-accent); color: #fff; font-size: 0.7rem; font-weight: 700; width: 18px; height: 18px; border-radius: var(--radius-global); display: inline-flex; align-items: center; justify-content: center;">2</span>
+        </a>
+        <a href="login.html" class="btn btn-primary" id="nav-login-btn">Login</a>
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Open Navigation Menu">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE DRAWER -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+      </a>
+      <button class="drawer-close-btn" id="drawer-close" aria-label="Close Navigation Drawer">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ri-dashboard-2-line"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ri-tools-line"></i> Services</a></li>
+      <li><a href="shop.html" class="drawer-link"><i class="ri-store-2-line"></i> Shop Catalog</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ri-article-line"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ri-mail-line"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ri-speed-up-line"></i> Dashboard</a></li>
+      <li><a href="login.html" class="drawer-link"><i class="ri-login-box-line"></i> Login</a></li>
+    </ul>
+    <div class="drawer-controls">
+      <div class="drawer-control-row">
+        <span>Dark / Light Mode</span>
+        <button class="btn-icon theme-toggle-btn" aria-label="Toggle Theme in Drawer">
+          <i class="ri-moon-line"></i>
+        </button>
+      </div>
+      <div class="drawer-control-row">
+        <span>Toggle RTL (⇄)</span>
+        <button class="btn-icon rtl-toggle-btn" aria-label="Toggle RTL in Drawer">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- COMING SOON MAIN HERO WITH LIVE COUNTDOWN (STEP 9.11) -->
+  <main class="section" style="min-height: 75vh; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle at 50% 30%, rgba(249, 87, 22, 0.12) 0%, transparent 70%), var(--bg-surface);">
+    <div class="container" style="max-width: 780px;">
+      <div class="section-tag" style="margin-bottom: var(--space-2);">
+        <i class="ri-rocket-line"></i> Countdown to Launch
+      </div>
+      <h1 style="font-size: var(--size-h1); font-weight: var(--weight-h1); margin-bottom: var(--space-2);">
+        The Next Era of Automotive Performance
+      </h1>
+      <p class="lead" style="margin-bottom: var(--space-5);">
+        We are finalizing our 3D interactive chassis visualizer, live telemetry OBD-II cloud sync, and direct-from-factory titanium hardware catalog.
+      </p>
+
+      <!-- LIVE COUNTDOWN TIMER (STEP 9.11) -->
+      <div id="countdown-timer" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); margin-bottom: var(--space-6);">
+        <div class="card" style="padding: var(--space-3);">
+          <div id="days" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 580; color: var(--color-accent); line-height: 1;">24</div>
+          <span style="font-size: var(--size-caption); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Days</span>
+        </div>
+        <div class="card" style="padding: var(--space-3);">
+          <div id="hours" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 580; color: var(--color-accent); line-height: 1;">18</div>
+          <span style="font-size: var(--size-caption); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Hours</span>
+        </div>
+        <div class="card" style="padding: var(--space-3);">
+          <div id="minutes" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 580; color: var(--color-accent); line-height: 1;">42</div>
+          <span style="font-size: var(--size-caption); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Minutes</span>
+        </div>
+        <div class="card" style="padding: var(--space-3);">
+          <div id="seconds" style="font-family: var(--font-heading); font-size: 3rem; font-weight: 580; color: var(--color-accent); line-height: 1;">15</div>
+          <span style="font-size: var(--size-caption); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Seconds</span>
+        </div>
+      </div>
+
+      <!-- EMAIL CAPTURE / VIP WAITLIST (STEP 9.11 & 12) -->
+      <div class="card" style="padding: var(--space-4); max-width: 560px; margin-inline: auto;">
+        <h3 style="font-size: var(--size-h4); font-weight: var(--weight-h4); margin-bottom: var(--space-1);">Join The Early Access Pit Crew</h3>
+        <p style="font-size: var(--size-label); color: var(--text-muted); margin-bottom: var(--space-3);">Be the first to test drive the 3D chassis builder and receive a $100 store credit voucher at launch.</p>
+        
+        <form class="footer-newsletter-form" style="width: 100%;" data-validate="true" data-success-msg="You're on the VIP list! Check your inbox for your launch voucher code.">
+          <div class="form-field" style="flex: 1;">
+            <input type="email" class="form-control" placeholder="Enter your email address" required aria-label="Email for VIP access">
+            <span class="error-msg"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Request VIP Invite</button>
+          <div class="form-feedback" style="margin-top: var(--space-2);"></div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-1);">
+            <i class="ri-steering-2-fill"></i>
+            <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+          </a>
+          <p style="font-size: var(--size-label);">The definitive catalog for automotive enthusiasts, professional racing builders, and fleet operators.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="shop.html" class="footer-link">Shop Catalog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?cat=engine" class="footer-link">Engine Parts</a></li>
+            <li><a href="shop.html?cat=brakes" class="footer-link">Brake Systems</a></li>
+            <li><a href="shop.html?cat=suspension" class="footer-link">Suspension & Steering</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Inquiries</h4>
+          <p style="font-size: var(--size-caption);">Press and partnership inquiries:</p>
+          <div style="font-size: var(--size-label); color: var(--color-accent); font-weight: 500;">
+            press@autoparts.com
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Auto Parts Inc. All rights reserved. High-Performance Automotive E-Commerce Template.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Parts — High-Performance Automotive Parts & Accessories</title>
+  <meta name="description" content="Premium OEM and aftermarket auto parts, high-performance brake systems, engines, suspension, and vehicle fitment lookup with guaranteed compatibility.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f95716'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/></svg>">
+
+  <!-- Remix Icon CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
+
+  <!-- Structured Data JSON-LD (Step 14) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoPartsStore",
+    "name": "Auto Parts",
+    "description": "High-Performance automotive parts, OEM replacements, and precision accessories.",
+    "url": "https://autoparts.com",
+    "priceRange": "$$",
+    "telephone": "+1-800-555-AUTO",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "400 Performance Way",
+      "addressLocality": "Detroit",
+      "addressRegion": "MI",
+      "postalCode": "48201",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- SITE HEADER (STEP 4) -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" id="brand-logo" aria-label="Auto Parts Home">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+        <span class="brand-badge">PRO</span>
+      </a>
+
+      <!-- Desktop Horizontal Navigation (> 1024px) -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu-desktop">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Items: RTL, Theme Toggle, Cart, Login, Hamburger -->
+      <div class="header-actions">
+        <!-- RTL Toggle Button (Left-Right Icon per Step 5) -->
+        <button class="btn-icon rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL Direction" title="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+
+        <!-- Theme Toggle Desktop (> 1024px) -->
+        <button class="btn-icon theme-toggle-btn theme-toggle-desktop" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="ri-moon-line"></i>
+        </button>
+
+        <!-- Cart Quick Access -->
+        <a href="shop.html" class="btn-icon" aria-label="View Shopping Cart" title="View Cart" style="position: relative;">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span class="cart-counter-badge" style="position: absolute; top: -5px; inset-inline-end: -5px; background: var(--color-accent); color: #fff; font-size: 0.7rem; font-weight: 700; width: 18px; height: 18px; border-radius: var(--radius-global); display: inline-flex; align-items: center; justify-content: center;">2</span>
+        </a>
+
+        <!-- Login Button labeled exactly 'Login' per Step 4 -->
+        <a href="login.html" class="btn btn-primary" id="nav-login-btn">Login</a>
+
+        <!-- Hamburger Icon (<= 1024px) -->
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Open Navigation Menu">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE DRAWER (<= 1024px) -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+      </a>
+      <button class="drawer-close-btn" id="drawer-close" aria-label="Close Navigation Drawer">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link active"><i class="ri-home-4-line"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ri-dashboard-2-line"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ri-tools-line"></i> Services</a></li>
+      <li><a href="shop.html" class="drawer-link"><i class="ri-store-2-line"></i> Shop Catalog</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ri-article-line"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ri-mail-line"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ri-speed-up-line"></i> Dashboard</a></li>
+      <li><a href="login.html" class="drawer-link"><i class="ri-login-box-line"></i> Login</a></li>
+    </ul>
+
+    <!-- Controls inside drawer per Step 5 & 6 -->
+    <div class="drawer-controls">
+      <div class="drawer-control-row">
+        <span>Dark / Light Mode</span>
+        <button class="btn-icon theme-toggle-btn" aria-label="Toggle Theme in Drawer">
+          <i class="ri-moon-line"></i>
+        </button>
+      </div>
+      <div class="drawer-control-row">
+        <span>Toggle RTL (⇄)</span>
+        <button class="btn-icon rtl-toggle-btn" aria-label="Toggle RTL in Drawer">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- 9.1 HERO SECTION WITH ANIMATION (STEP 11) -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="section-tag">
+            <i class="ri-shield-flash-line"></i> Certified OEM & Performance Fitment
+          </div>
+          <h1 class="hero-title">
+            Engineered For Speed. Built For <span class="accent-word">Endurance</span>.
+          </h1>
+          <p class="hero-desc">
+            Explore over 180,000 precision auto parts, brake systems, suspension kits, and engine upgrades backed by 100% vehicle compatibility guarantee.
+          </p>
+          <div class="hero-actions">
+            <a href="shop.html" class="btn btn-primary btn-lg" id="hero-cta-shop">
+              <i class="ri-shopping-cart-2-line"></i> Shop All Parts
+            </a>
+            <a href="#vehicle-finder" class="btn btn-outline btn-lg" id="hero-cta-finder">
+              <i class="ri-car-line"></i> Select Your Vehicle
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>180K+</h3>
+              <p>In-Stock Parts</p>
+            </div>
+            <div class="stat-item">
+              <h3>100%</h3>
+              <p>Fitment Match</p>
+            </div>
+            <div class="stat-item">
+              <h3>24/7</h3>
+              <p>Tech Support</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-media-wrapper">
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80" alt="High-Performance Twin Turbo Engine Bay" loading="eager">
+          </div>
+          <div class="hero-floating-badge">
+            <div class="badge-icon">
+              <i class="ri-verified-badge-fill"></i>
+            </div>
+            <div>
+              <div style="font-family: var(--font-heading); font-weight: 520; font-size: 0.95rem; color: var(--text-main);">Guaranteed Compatibility</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Laser-scanned OEM tolerances</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VEHICLE FINDER WIDGET SECTION -->
+    <section class="section" id="vehicle-finder" style="padding-top: 0;">
+      <div class="container">
+        <div class="vehicle-finder-card">
+          <div class="finder-header">
+            <h3 class="finder-title">
+              <i class="ri-compass-3-line"></i> Quick Fitment Finder: Select Your Vehicle
+            </h3>
+            <span style="font-size: var(--size-caption); color: var(--color-accent); font-weight: var(--weight-label);">
+              <i class="ri-check-line"></i> Accurate Parts Fit Guaranteed
+            </span>
+          </div>
+          <form id="vehicle-finder-form" class="finder-form">
+            <div class="form-group">
+              <label for="finder-year">1. Year</label>
+              <select id="finder-year" class="form-control" required>
+                <option value="">Select Year</option>
+                <option value="2025">2025</option>
+                <option value="2024" selected>2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="finder-make">2. Make</label>
+              <select id="finder-make" class="form-control" required>
+                <option value="">Select Make</option>
+                <option value="Porsche">Porsche</option>
+                <option value="BMW" selected>BMW</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Ford">Ford</option>
+                <option value="Audi">Audi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="finder-model">3. Model</label>
+              <select id="finder-model" class="form-control" required>
+                <option value="M3 Competition (G80)" selected>M3 Competition (G80)</option>
+                <option value="M5 CS (F90)">M5 CS (F90)</option>
+                <option value="330i M-Sport">330i M-Sport</option>
+                <option value="X5 M50i">X5 M50i</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="finder-engine">4. Engine / Trim</label>
+              <select id="finder-engine" class="form-control">
+                <option value="3.0L Twin-Turbo S58" selected>3.0L Twin-Turbo S58</option>
+                <option value="4.4L Twin-Turbo V8">4.4L Twin-Turbo V8</option>
+                <option value="2.0L Turbo B48">2.0L Turbo B48</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary" id="finder-submit-btn">
+              <i class="ri-search-line"></i> Find Compatible Parts
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 MAIN PRODUCT CATEGORIES (SPECIFIED IN PROMPT) -->
+    <section class="section section-surface" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Precision Catalog</div>
+          <h2>Explore Core Product Categories</h2>
+          <p>Source high-grade original equipment manufacturer components and high-performance aftermarket systems.</p>
+        </div>
+
+        <div class="category-grid">
+          <!-- 1. Engine Parts -->
+          <a href="shop.html?cat=engine" class="category-card" id="cat-engine">
+            <div class="category-icon"><i class="ri-dashboard-3-line"></i></div>
+            <h3 class="category-name">Engine Parts</h3>
+            <span class="category-count">14,280 Products</span>
+          </a>
+
+          <!-- 2. Brake Systems -->
+          <a href="shop.html?cat=brakes" class="category-card" id="cat-brakes">
+            <div class="category-icon"><i class="ri-disc-line"></i></div>
+            <h3 class="category-name">Brake Systems</h3>
+            <span class="category-count">8,940 Products</span>
+          </a>
+
+          <!-- 3. Suspension & Steering -->
+          <a href="shop.html?cat=suspension" class="category-card" id="cat-suspension">
+            <div class="category-icon"><i class="ri-git-commit-line"></i></div>
+            <h3 class="category-name">Suspension & Steering</h3>
+            <span class="category-count">6,120 Products</span>
+          </a>
+
+          <!-- 4. Batteries -->
+          <a href="shop.html?cat=batteries" class="category-card" id="cat-batteries">
+            <div class="category-icon"><i class="ri-battery-charge-line"></i></div>
+            <h3 class="category-name">Batteries</h3>
+            <span class="category-count">2,850 Products</span>
+          </a>
+
+          <!-- 5. Filters -->
+          <a href="shop.html?cat=filters" class="category-card" id="cat-filters">
+            <div class="category-icon"><i class="ri-filter-3-line"></i></div>
+            <h3 class="category-name">Filters</h3>
+            <span class="category-count">5,430 Products</span>
+          </a>
+
+          <!-- 6. Electrical Parts -->
+          <a href="shop.html?cat=electrical" class="category-card" id="cat-electrical">
+            <div class="category-icon"><i class="ri-flashlight-line"></i></div>
+            <h3 class="category-name">Electrical Parts</h3>
+            <span class="category-count">11,200 Products</span>
+          </a>
+
+          <!-- 7. Lighting -->
+          <a href="shop.html?cat=lighting" class="category-card" id="cat-lighting">
+            <div class="category-icon"><i class="ri-lightbulb-flash-line"></i></div>
+            <h3 class="category-name">Lighting</h3>
+            <span class="category-count">7,650 Products</span>
+          </a>
+
+          <!-- 8. Tires & Wheels -->
+          <a href="shop.html?cat=tires-wheels" class="category-card" id="cat-wheels">
+            <div class="category-icon"><i class="ri-lifebuoy-line"></i></div>
+            <h3 class="category-name">Tires & Wheels</h3>
+            <span class="category-count">9,340 Products</span>
+          </a>
+
+          <!-- 9. Exterior Accessories -->
+          <a href="shop.html?cat=exterior" class="category-card" id="cat-exterior">
+            <div class="category-icon"><i class="ri-shield-star-line"></i></div>
+            <h3 class="category-name">Exterior Accessories</h3>
+            <span class="category-count">4,780 Products</span>
+          </a>
+
+          <!-- 10. Interior Accessories -->
+          <a href="shop.html?cat=interior" class="category-card" id="cat-interior">
+            <div class="category-icon"><i class="ri-armchair-line"></i></div>
+            <h3 class="category-name">Interior Accessories</h3>
+            <span class="category-count">3,910 Products</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED AUTO PARTS -->
+    <section class="section" id="featured-parts">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Race-Tested Components</div>
+          <h2>Featured Performance Parts</h2>
+          <p>Precision-tested engineered components certified for maximum endurance, track duty, and street performance.</p>
+        </div>
+
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <article class="product-card" id="part-1">
+            <span class="product-badge">Top Rated</span>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1600793575654-910699b5e4d4?auto=format&fit=crop&w=600&q=80" alt="Apex Carbon Ceramic 6-Piston Brake Kit" loading="lazy">
+            </div>
+            <span class="product-cat">Brake Systems</span>
+            <h3 class="product-title">Apex Carbon-Ceramic 6-Piston Caliper & Rotor Kit</h3>
+            <div class="compatibility-tag"><i class="ri-check-line"></i> Fits BMW M3 / M5 / G80</div>
+            <div class="product-rating">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+              <span style="color: var(--text-muted); margin-inline-start: 4px;">(4.9)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">$1,849.00</span>
+              <span class="old-price">$2,199.00</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary btn-sm btn-add-cart" style="flex: 1;" data-name="Apex Carbon-Ceramic Brake Kit">
+                <i class="ri-shopping-cart-line"></i> Add to Cart
+              </button>
+              <a href="shop.html" class="btn btn-outline btn-sm" aria-label="Details"><i class="ri-eye-line"></i></a>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card" id="part-2">
+            <span class="product-badge">OEM Spec</span>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80" alt="Titan Stage 2 Twin Scroll Turbocharger" loading="lazy">
+            </div>
+            <span class="product-cat">Engine Parts</span>
+            <h3 class="product-title">Titan Stage 2 Billet Twin-Scroll Turbocharger</h3>
+            <div class="compatibility-tag"><i class="ri-check-line"></i> Fits Toyota Supra GR / B58</div>
+            <div class="product-rating">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+              <span style="color: var(--text-muted); margin-inline-start: 4px;">(4.8)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">$2,450.00</span>
+              <span class="old-price">$2,790.00</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary btn-sm btn-add-cart" style="flex: 1;" data-name="Titan Stage 2 Turbocharger">
+                <i class="ri-shopping-cart-line"></i> Add to Cart
+              </button>
+              <a href="shop.html" class="btn btn-outline btn-sm" aria-label="Details"><i class="ri-eye-line"></i></a>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card" id="part-3">
+            <span class="product-badge">New Arrival</span>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="Veloce Inverted Monotube Coilover Kit" loading="lazy">
+            </div>
+            <span class="product-cat">Suspension & Steering</span>
+            <h3 class="product-title">Veloce Track Inverted Monotube Coilover System</h3>
+            <div class="compatibility-tag"><i class="ri-check-line"></i> 32-Way Damping Adjust</div>
+            <div class="product-rating">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+              <span style="color: var(--text-muted); margin-inline-start: 4px;">(5.0)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">$1,290.00</span>
+              <span class="old-price">$1,450.00</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary btn-sm btn-add-cart" style="flex: 1;" data-name="Veloce Coilover System">
+                <i class="ri-shopping-cart-line"></i> Add to Cart
+              </button>
+              <a href="shop.html" class="btn btn-outline btn-sm" aria-label="Details"><i class="ri-eye-line"></i></a>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card" id="part-4">
+            <span class="product-badge">Hot</span>
+            <div class="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1541348263662-e0c8de4259ba?auto=format&fit=crop&w=600&q=80" alt="Laser Matrix Bi-LED Headlight Assembly" loading="lazy">
+            </div>
+            <span class="product-cat">Lighting</span>
+            <h3 class="product-title">Lumix Laser-Matrix Dynamic Projector Headlights</h3>
+            <div class="compatibility-tag"><i class="ri-check-line"></i> Plug & Play OEM Harness</div>
+            <div class="product-rating">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+              <span style="color: var(--text-muted); margin-inline-start: 4px;">(4.9)</span>
+            </div>
+            <div class="product-price-row">
+              <span class="current-price">$780.00</span>
+              <span class="old-price">$920.00</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-primary btn-sm btn-add-cart" style="flex: 1;" data-name="Lumix Laser-Matrix Headlights">
+                <i class="ri-shopping-cart-line"></i> Add to Cart
+              </button>
+              <a href="shop.html" class="btn btn-outline btn-sm" aria-label="Details"><i class="ri-eye-line"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL OFFER PROMO BANNER -->
+    <section class="section" id="special-offer">
+      <div class="container">
+        <div class="promo-banner">
+          <div class="promo-content">
+            <span class="section-tag" style="background: rgba(255,255,255,0.15); color: #fff;">Limited Seasonal Deal</span>
+            <h2>Get 20% Off All Track & Street Brake Upgrades</h2>
+            <p>Upgrade your vehicle stopping power with slotted carbon-metallic rotors, braided steel brake lines, and track-rated racing fluid.</p>
+            <div style="display: flex; gap: var(--space-2); align-items: center; flex-wrap: wrap;">
+              <a href="shop.html?cat=brakes" class="btn btn-primary btn-lg">Claim 20% Discount</a>
+              <span style="font-family: var(--font-heading); font-size: 0.95rem; color: #cbd5e1;">Use code: <strong>TRACKREADY20</strong></span>
+            </div>
+          </div>
+          <div class="promo-media">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80" alt="High-Performance Supercar Exhaust & Diffuser" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9.1 SERVICES SECTION (CARD GRID PER STEP 9.1) -->
+    <section class="section section-surface" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Engineered Solutions</div>
+          <h2>Our Core Automotive Services</h2>
+          <p>From precision OEM fitment verification to high-performance custom tuning and global freight logistics.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="card" id="service-1">
+            <div class="card-icon"><i class="ri-microscope-line"></i></div>
+            <h3 class="card-title">Fitment Verification</h3>
+            <p class="card-text">Every single order is verified against VIN and manufacturer chassis databases before dispatch to guarantee zero fitment issues.</p>
+            <a href="services.html" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="card" id="service-2">
+            <div class="card-icon"><i class="ri-cpu-line"></i></div>
+            <h3 class="card-title">ECU & Dyno Tuning</h3>
+            <p class="card-text">Custom map flashing and performance calibrations designed to optimize air-fuel ratios, boost curves, and throttle response.</p>
+            <a href="services.html" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="card" id="service-3">
+            <div class="card-icon"><i class="ri-truck-line"></i></div>
+            <h3 class="card-title">Express Worldwide Freight</h3>
+            <p class="card-text">Same-day dispatch on critical mechanical components with expedited air-cargo shipping to over 85 countries worldwide.</p>
+            <a href="services.html" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9.1 ABOUT SECTION (STORY + VISUALS PER STEP 9.1) -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="hero-grid" style="align-items: center;">
+          <div class="hero-media">
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Master Mechanical Technician Inspecting Engine Assembly" loading="lazy">
+          </div>
+          <div>
+            <div class="section-tag">Our Heritage & Craft</div>
+            <h2>Built by Racers, Trusted by Garages Worldwide</h2>
+            <p class="lead">Founded in 2012 by motorsport engineers, Auto Parts has grown into the leading automotive catalog for both everyday mechanics and championship racing teams.</p>
+            <p>We believe in absolute precision. Our testing facility subjects every suspension link, brake rotor, and electronic sensor to rigorous dyno and stress tests before it reaches our warehouse shelves.</p>
+            <div style="display: flex; gap: var(--space-4); margin-block: var(--space-3);">
+              <div>
+                <h3 style="color: var(--color-accent); font-size: 2rem; margin: 0;">14+</h3>
+                <span style="font-size: var(--size-caption); color: var(--text-muted);">Years In Business</span>
+              </div>
+              <div>
+                <h3 style="color: var(--color-accent); font-size: 2rem; margin: 0;">99.8%</h3>
+                <span style="font-size: var(--size-caption); color: var(--text-muted);">Accuracy Ratio</span>
+              </div>
+              <div>
+                <h3 style="color: var(--color-accent); font-size: 2rem; margin: 0;">250K+</h3>
+                <span style="font-size: var(--size-caption); color: var(--text-muted);">Satisfied Drivers</span>
+              </div>
+            </div>
+            <a href="about.html" class="btn btn-primary">Read Our Full Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9.1 FEATURES / HIGHLIGHTS SECTION (ICON + TEXT GRID) -->
+    <section class="section section-surface" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">The Auto Parts Advantage</div>
+          <h2>Why Automotive Enthusiasts Choose Us</h2>
+          <p>Unmatched quality control, rapid logistics, and technical support directly from master technicians.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="card">
+            <div class="card-icon"><i class="ri-shield-check-line"></i></div>
+            <h3 class="card-title">Lifetime Warranty</h3>
+            <p class="card-text">Comprehensive warranty coverage on all mechanical and chassis components against manufacturing defects.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ri-exchange-dollar-line"></i></div>
+            <h3 class="card-title">60-Day Easy Returns</h3>
+            <p class="card-text">No hassle return policy with pre-paid return labels if your ordered part does not fit your specific chassis.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ri-flight-takeoff-line"></i></div>
+            <h3 class="card-title">Same-Day Dispatch</h3>
+            <p class="card-text">Orders placed before 4:00 PM EST ship immediately from our automated central fulfillment hub.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ri-customer-service-2-line"></i></div>
+            <h3 class="card-title">Master Tech Support</h3>
+            <p class="card-text">Talk directly to certified mechanics ready to answer wiring, torque spec, and installation questions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9.1 TESTIMONIALS SECTION (GRID PER STEP 9.1) -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Driver Reviews</div>
+          <h2>Verified Customer Experiences</h2>
+          <p>Real feedback from weekend track warriors, professional racing teams, and independent workshop owners.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Elena Rostova" class="testimonial-avatar">
+            <div class="product-rating" style="margin-bottom: var(--space-2);">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">"The vehicle fitment tool was spot-on. Found the exact brake calipers and rotor set for my track BMW M3 G80. Shipped next day and bolted right up with zero vibration."</p>
+            <h3 class="testimonial-author">Elena Rostova</h3>
+            <span class="testimonial-role">Track Day Instructor, Apex Club</span>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Marcus Vance" class="testimonial-avatar">
+            <div class="product-rating" style="margin-bottom: var(--space-2);">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">"We order all replacement suspension linkages and turbo upgrades from Auto Parts for our independent fleet garage. The pricing is unbeatable and tech support is phenomenal."</p>
+            <h3 class="testimonial-author">Marcus Vance</h3>
+            <span class="testimonial-role">Lead Mechanic, Vance Performance</span>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="David Sterling" class="testimonial-avatar">
+            <div class="product-rating" style="margin-bottom: var(--space-2);">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+            <p class="testimonial-quote">"Outstanding packaging and authentic OEM parts. Replaced my entire coilover setup and cooling radiator in a single weekend. Highly recommended store!"</p>
+            <h3 class="testimonial-author">David Sterling</h3>
+            <span class="testimonial-role">Automotive Enthusiast</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9.1 FULL-WIDTH CALL TO ACTION (STEP 9.1) -->
+    <section class="cta-section" id="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div class="section-tag">Ready To Upgrade?</div>
+          <h2>Find the Exact Parts Built For Your Ride</h2>
+          <p>Get instant access to our catalog of certified OEM and aftermarket replacement components with real-time stock availability and rapid delivery.</p>
+          <div style="display: flex; gap: var(--space-2); justify-content: center; flex-wrap: wrap;">
+            <a href="shop.html" class="btn btn-primary btn-lg">Browse Complete Catalog</a>
+            <a href="contact.html" class="btn btn-outline btn-lg">Speak With a Specialist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- STEP 10 — FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-1);">
+            <i class="ri-steering-2-fill"></i>
+            <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+          </a>
+          <p style="font-size: var(--size-label);">
+            Premier destination for original OEM replacements, performance tuning parts, and certified automotive engineering accessories.
+          </p>
+          <div style="display: flex; gap: var(--space-1); margin-top: var(--space-1);">
+            <a href="https://facebook.com" class="btn-icon" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+            <a href="https://twitter.com" class="btn-icon" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+            <a href="https://instagram.com" class="btn-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="https://youtube.com" class="btn-icon" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="shop.html" class="footer-link">Shop Catalog</a></li>
+            <li><a href="blog.html" class="footer-link">Technical Blog</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Product Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?cat=engine" class="footer-link">Engine Parts</a></li>
+            <li><a href="shop.html?cat=brakes" class="footer-link">Brake Systems</a></li>
+            <li><a href="shop.html?cat=suspension" class="footer-link">Suspension & Steering</a></li>
+            <li><a href="shop.html?cat=batteries" class="footer-link">Batteries & Electrical</a></li>
+            <li><a href="shop.html?cat=lighting" class="footer-link">Performance Lighting</a></li>
+            <li><a href="shop.html?cat=tires-wheels" class="footer-link">Tires & Wheels</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Support -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Garage Bulletin</h4>
+          <p style="font-size: var(--size-caption);">Subscribe for fitment releases, technical bulletins, and exclusive discount coupons.</p>
+          <form class="footer-newsletter-form" data-validate="true" data-success-msg="Subscribed successfully!">
+            <div class="form-field" style="flex: 1;">
+              <input type="email" class="form-control" placeholder="Enter your email" required aria-label="Email address for newsletter">
+              <span class="error-msg"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter"><i class="ri-send-plane-fill"></i></button>
+            <div class="form-feedback"></div>
+          </form>
+          <div style="font-size: var(--size-caption); color: var(--text-muted); margin-top: var(--space-1);">
+            <i class="ri-customer-service-fill" style="color: var(--color-accent);"></i> Support Hotline: 1-800-555-AUTO
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Centered (Step 10) -->
+      <div class="footer-bottom">
+        <p>© 2026 Auto Parts Inc. All rights reserved. High-Performance Automotive E-Commerce Template.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

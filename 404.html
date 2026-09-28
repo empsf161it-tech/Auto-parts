@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Track Limit Exceeded | Auto Parts</title>
+  <meta name="description" content="The page or auto part you are looking for has been moved or retired from our active catalog. Return to our main catalog.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f95716'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" id="brand-logo" aria-label="Auto Parts Home">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+        <span class="brand-badge">404</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu-desktop">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL Direction" title="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="btn-icon theme-toggle-btn theme-toggle-desktop" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <a href="shop.html" class="btn-icon" aria-label="View Shopping Cart" title="View Cart" style="position: relative;">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span class="cart-counter-badge" style="position: absolute; top: -5px; inset-inline-end: -5px; background: var(--color-accent); color: #fff; font-size: 0.7rem; font-weight: 700; width: 18px; height: 18px; border-radius: var(--radius-global); display: inline-flex; align-items: center; justify-content: center;">2</span>
+        </a>
+        <a href="login.html" class="btn btn-primary" id="nav-login-btn">Login</a>
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Open Navigation Menu">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE DRAWER -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+      </a>
+      <button class="drawer-close-btn" id="drawer-close" aria-label="Close Navigation Drawer">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ri-dashboard-2-line"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ri-tools-line"></i> Services</a></li>
+      <li><a href="shop.html" class="drawer-link"><i class="ri-store-2-line"></i> Shop Catalog</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ri-article-line"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ri-mail-line"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ri-speed-up-line"></i> Dashboard</a></li>
+      <li><a href="login.html" class="drawer-link"><i class="ri-login-box-line"></i> Login</a></li>
+    </ul>
+    <div class="drawer-controls">
+      <div class="drawer-control-row">
+        <span>Dark / Light Mode</span>
+        <button class="btn-icon theme-toggle-btn" aria-label="Toggle Theme in Drawer">
+          <i class="ri-moon-line"></i>
+        </button>
+      </div>
+      <div class="drawer-control-row">
+        <span>Toggle RTL (⇄)</span>
+        <button class="btn-icon rtl-toggle-btn" aria-label="Toggle RTL in Drawer">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 404 MAIN HERO (STEP 9.10) -->
+  <main class="section" style="min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div class="container" style="max-width: 640px;">
+      <div style="font-family: var(--font-heading); font-size: 6rem; font-weight: 580; color: var(--color-accent); line-height: 1; margin-bottom: var(--space-2); text-shadow: 0 0 30px rgba(249,87,22,0.3);">
+        404
+      </div>
+      <div class="section-tag" style="margin-bottom: var(--space-2);">
+        <i class="ri-alarm-warning-line"></i> Track Limit Exceeded • Blown Piston Warning
+      </div>
+      <h1 style="font-size: var(--size-h2); font-weight: var(--weight-h2); margin-bottom: var(--space-2);">
+        Lost In The Pits
+      </h1>
+      <p class="lead" style="margin-bottom: var(--space-4);">
+        The automotive component or page you are looking for has been relocated, superseded by an upgraded part number, or taken into the repair bay.
+      </p>
+      <div style="display: flex; gap: var(--space-2); justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-primary btn-lg">
+          <i class="ri-home-4-line"></i> Return to Homepage
+        </a>
+        <a href="shop.html" class="btn btn-outline btn-lg">
+          <i class="ri-search-line"></i> Search Parts Catalog
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-1);">
+            <i class="ri-steering-2-fill"></i>
+            <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+          </a>
+          <p style="font-size: var(--size-label);">The definitive catalog for automotive enthusiasts, professional racing builders, and fleet operators.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="shop.html" class="footer-link">Shop Catalog</a></li>
+            <li><a href="blog.html" class="footer-link">Technical Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?cat=engine" class="footer-link">Engine Parts</a></li>
+            <li><a href="shop.html?cat=brakes" class="footer-link">Brake Systems</a></li>
+            <li><a href="shop.html?cat=suspension" class="footer-link">Suspension & Steering</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Immediate Support</h4>
+          <p style="font-size: var(--size-caption);">Questions about missing part numbers?</p>
+          <div style="font-size: var(--size-label); color: var(--color-accent); font-weight: 500;">
+            <i class="ri-phone-line"></i> 1-800-555-AUTO
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Auto Parts Inc. All rights reserved. High-Performance Automotive E-Commerce Template.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

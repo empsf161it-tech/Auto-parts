@@ -1,0 +1,89 @@
+/* ==========================================================================
+   AUTO PARTS - RTL (RIGHT-TO-LEFT) OVERRIDES
+   Separate overrides file loaded/active in RTL mode (Step 5)
+   ========================================================================== */
+
+html[dir="rtl"],
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Drawer Slides from LEFT in RTL mode (Critical Step 5 Rule) */
+html[dir="rtl"] .mobile-drawer,
+body.rtl .mobile-drawer {
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+  transform: translateX(-100%);
+  border-inline-end: 1px solid var(--border-color);
+  border-inline-start: none;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.25);
+}
+
+html[dir="rtl"] .mobile-drawer.active,
+body.rtl .mobile-drawer.active {
+  transform: translateX(0);
+}
+
+/* Alignment rules verification in RTL */
+html[dir="rtl"] .section-header,
+body.rtl .section-header,
+html[dir="rtl"] .section-header h2,
+body.rtl .section-header h2,
+html[dir="rtl"] .section-header p,
+body.rtl .section-header p {
+  text-align: center !important;
+}
+
+/* Card alignment in RTL */
+html[dir="rtl"] .card,
+body.rtl .card {
+  text-align: center;
+}
+
+/* Product badges flip */
+html[dir="rtl"] .product-badge,
+body.rtl .product-badge {
+  inset-inline-start: var(--space-2);
+  inset-inline-end: auto;
+}
+
+/* Promo banner floating gradient flip */
+html[dir="rtl"] .promo-banner::before,
+body.rtl .promo-banner::before {
+  inset-inline-end: auto;
+  inset-inline-start: -20%;
+}
+
+/* Breadcrumbs & Arrow Icons flip */
+html[dir="rtl"] .ri-arrow-right-line,
+body.rtl .ri-arrow-right-line,
+html[dir="rtl"] .ri-arrow-right-s-line,
+body.rtl .ri-arrow-right-s-line {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+/* Form controls text direction */
+html[dir="rtl"] .form-control,
+body.rtl .form-control {
+  text-align: right;
+}
+
+/* Dashboard Sidebar RTL */
+html[dir="rtl"] .dashboard-sidebar,
+body.rtl .dashboard-sidebar {
+  border-inline-end: none;
+  border-inline-start: 1px solid var(--border-color);
+}
+
+html[dir="rtl"] .dashboard-nav-item,
+body.rtl .dashboard-nav-item {
+  text-align: right;
+}
+
+/* Data tables in RTL */
+html[dir="rtl"] .data-table,
+body.rtl .data-table {
+  text-align: right;
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Auto Parts — Engineering Heritage & Precision Quality</title>
+  <meta name="description" content="Learn about Auto Parts, our engineering background, our 14-year heritage in motorsport and aftermarket development, leadership team, and milestones.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f95716'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" id="brand-logo" aria-label="Auto Parts Home">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+        <span class="brand-badge">HERITAGE</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu-desktop">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL Direction" title="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="btn-icon theme-toggle-btn theme-toggle-desktop" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <a href="shop.html" class="btn-icon" aria-label="View Shopping Cart" title="View Cart" style="position: relative;">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span class="cart-counter-badge" style="position: absolute; top: -5px; inset-inline-end: -5px; background: var(--color-accent); color: #fff; font-size: 0.7rem; font-weight: 700; width: 18px; height: 18px; border-radius: var(--radius-global); display: inline-flex; align-items: center; justify-content: center;">2</span>
+        </a>
+        <a href="login.html" class="btn btn-primary" id="nav-login-btn">Login</a>
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Open Navigation Menu">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE DRAWER -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+      </a>
+      <button class="drawer-close-btn" id="drawer-close" aria-label="Close Navigation Drawer">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ri-dashboard-2-line"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link"><i class="ri-tools-line"></i> Services</a></li>
+      <li><a href="shop.html" class="drawer-link"><i class="ri-store-2-line"></i> Shop Catalog</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ri-article-line"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ri-mail-line"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ri-speed-up-line"></i> Dashboard</a></li>
+      <li><a href="login.html" class="drawer-link"><i class="ri-login-box-line"></i> Login</a></li>
+    </ul>
+    <div class="drawer-controls">
+      <div class="drawer-control-row">
+        <span>Dark / Light Mode</span>
+        <button class="btn-icon theme-toggle-btn" aria-label="Toggle Theme in Drawer">
+          <i class="ri-moon-line"></i>
+        </button>
+      </div>
+      <div class="drawer-control-row">
+        <span>Toggle RTL (⇄)</span>
+        <button class="btn-icon rtl-toggle-btn" aria-label="Toggle RTL in Drawer">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- ABOUT HERO -->
+    <section class="section section-surface" style="padding-block: var(--space-8); text-align: center; border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-tag"><i class="ri-history-line"></i> Established 2012</div>
+        <h1 style="font-size: var(--size-h1); font-weight: var(--weight-h1); margin-bottom: var(--space-2);">Engineered with Passion. Driven by Precision.</h1>
+        <p class="lead" style="max-width: 680px; margin-inline: auto;">
+          From a grassroots garage specializing in endurance brake upgrades to an international warehouse supplying 180,000+ certified parts across 85 countries.
+        </p>
+      </div>
+    </section>
+
+    <!-- MISSION & VISION CARDS -->
+    <section class="section" id="mission-vision">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Core Principles</div>
+          <h2>Our Guiding Purpose</h2>
+          <p>We believe every driver deserves total mechanical certainty, whether on the daily commute or during full-throttle track laps.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="card">
+            <div class="card-icon"><i class="ri-focus-2-line"></i></div>
+            <h3 class="card-title">Our Mission</h3>
+            <p class="card-text">To eliminate guesswork in aftermarket repairs by offering authentic, lab-tested automotive parts with guaranteed chassis fitment and rapid logistics.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ri-eye-2-line"></i></div>
+            <h3 class="card-title">Our Vision</h3>
+            <p class="card-text">To become the world's most trusted automotive engineering platform, uniting weekend enthusiasts, commercial fleets, and motorsport builders under one standard of quality.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon"><i class="ri-medal-line"></i></div>
+            <h3 class="card-title">Our Quality Guarantee</h3>
+            <p class="card-text">Every single supplier undergoes strict ISO 9001 audits. We never sell counterfeit, rejected, or unverified hardware under any circumstances.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY & WORKSHOP SECTION -->
+    <section class="section section-surface" id="story">
+      <div class="container">
+        <div class="hero-grid" style="align-items: center;">
+          <div>
+            <div class="section-tag">Origin Story</div>
+            <h2>Born on the Circuit, Built for Every Road</h2>
+            <p class="lead">In 2012, two motorsport engineers noticed that finding exact replacement parts with verified tolerances was agonizingly difficult.</p>
+            <p>Components arrived with incorrect bolt patterns, fragile plastic clips, and zero technical support. We set out to change the industry by combining laser-scanned chassis measurement databases with automated warehousing.</p>
+            <p>Today, our testing facility includes an all-wheel-drive hub dyno, spectral material analyzers, and coordinate measuring machines (CMM) that inspect parts down to the micron.</p>
+            <div style="display: flex; gap: var(--space-2); margin-top: var(--space-4);">
+              <a href="shop.html" class="btn btn-primary">Browse Catalog</a>
+              <a href="contact.html" class="btn btn-outline">Visit Our Facility</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Precision Automotive Facility and Dyno Cell" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MILESTONE TIMELINE (STEP 9.4) -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Evolution</div>
+          <h2>Our Growth Milestones</h2>
+          <p>Key moments in our journey from a local brake fabrication workshop to a global parts leader.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3);">
+          <div class="card">
+            <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 540; color: var(--color-accent); margin-bottom: var(--space-1);">2012</div>
+            <h3 class="card-title">Workshop Founded</h3>
+            <p class="card-text">Started in Detroit, Michigan with a 3,000 sq ft garage specializing in custom brake caliper brackets and racing rotors.</p>
+          </div>
+
+          <div class="card">
+            <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 540; color: var(--color-accent); margin-bottom: var(--space-1);">2016</div>
+            <h3 class="card-title">Digital Fitment Engine</h3>
+            <p class="card-text">Launched our proprietary VIN-to-OEM cross-reference database, cutting customer return rates to under 0.2%.</p>
+          </div>
+
+          <div class="card">
+            <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 540; color: var(--color-accent); margin-bottom: var(--space-1);">2020</div>
+            <h3 class="card-title">Central Distribution Hub</h3>
+            <p class="card-text">Opened our 120,000 sq ft automated logistics center with same-day robotics-assisted picking and packing.</p>
+          </div>
+
+          <div class="card">
+            <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 540; color: var(--color-accent); margin-bottom: var(--space-1);">2026</div>
+            <h3 class="card-title">Global Expansion</h3>
+            <p class="card-text">Serving over 250,000 active racers, workshops, and commercial fleets across North America, Europe, and Asia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & ENGINEERING TEAM (STEP 9.4) -->
+    <section class="section section-surface" id="team">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Engineering Minds</div>
+          <h2>Meet Our Technical Leadership</h2>
+          <p>Automotive engineers, master mechanics, and logistics directors with decades of combined circuit experience.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Member 1 -->
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Marcus Vance" style="width: 100px; height: 100px; border-radius: var(--radius-global); object-fit: cover; margin-bottom: var(--space-2); border: 2px solid var(--color-accent);">
+            <h3 class="card-title">Marcus Vance</h3>
+            <span style="font-size: var(--size-caption); color: var(--color-accent); font-weight: 500; margin-bottom: var(--space-2);">Founder & Chief Engineer</span>
+            <p class="card-text">Former GT3 powertrain development lead with 18 years in championship race engine calibration and turbo systems.</p>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Dr. Sophia Chen" style="width: 100px; height: 100px; border-radius: var(--radius-global); object-fit: cover; margin-bottom: var(--space-2); border: 2px solid var(--color-accent);">
+            <h3 class="card-title">Dr. Sophia Chen</h3>
+            <span style="font-size: var(--size-caption); color: var(--color-accent); font-weight: 500; margin-bottom: var(--space-2);">Head of Quality & Materials</span>
+            <p class="card-text">PhD in Metallurgical Engineering. Oversees tensile stress testing, metallurgical coatings, and ISO compliance.</p>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="David Sterling" style="width: 100px; height: 100px; border-radius: var(--radius-global); object-fit: cover; margin-bottom: var(--space-2); border: 2px solid var(--color-accent);">
+            <h3 class="card-title">David Sterling</h3>
+            <span style="font-size: var(--size-caption); color: var(--color-accent); font-weight: 500; margin-bottom: var(--space-2);">Director of Logistics & Tech Support</span>
+            <p class="card-text">20 years managing international aerospace and automotive supply chains with a passion for track day coaching.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="section-tag">Experience The Difference</div>
+          <h2>Equip Your Garage with Precision Parts</h2>
+          <p>Order certified OEM components with confidence backed by our master technical hotline and easy returns.</p>
+          <a href="shop.html" class="btn btn-primary btn-lg">Explore Parts Catalog</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-1);">
+            <i class="ri-steering-2-fill"></i>
+            <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+          </a>
+          <p style="font-size: var(--size-label);">The trusted source for high-performance automotive engineering and genuine OEM parts.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="shop.html" class="footer-link">Shop Catalog</a></li>
+            <li><a href="blog.html" class="footer-link">Technical Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?cat=engine" class="footer-link">Engine Parts</a></li>
+            <li><a href="shop.html?cat=brakes" class="footer-link">Brake Systems</a></li>
+            <li><a href="shop.html?cat=suspension" class="footer-link">Suspension & Steering</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Support</h4>
+          <p style="font-size: var(--size-caption);">Talk directly with our mechanical support team.</p>
+          <div style="font-size: var(--size-label); color: var(--color-accent); font-weight: 500;">
+            <i class="ri-phone-line"></i> 1-800-555-AUTO
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Auto Parts Inc. All rights reserved. High-Performance Automotive E-Commerce Template.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

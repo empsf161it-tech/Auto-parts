@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automotive Engineering & Fitment Services — Auto Parts</title>
+  <meta name="description" content="Discover professional automotive services including OEM fitment verification, custom dyno tuning, precision engine machining, and core exchange.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f95716'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-stylesheet" disabled>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" id="brand-logo" aria-label="Auto Parts Home">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+        <span class="brand-badge">PRO</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu-desktop">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon rtl-toggle-btn" id="rtl-toggle" aria-label="Toggle RTL Direction" title="Toggle RTL">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+        <button class="btn-icon theme-toggle-btn theme-toggle-desktop" id="theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <a href="shop.html" class="btn-icon" aria-label="View Shopping Cart" title="View Cart" style="position: relative;">
+          <i class="ri-shopping-bag-3-line"></i>
+          <span class="cart-counter-badge" style="position: absolute; top: -5px; inset-inline-end: -5px; background: var(--color-accent); color: #fff; font-size: 0.7rem; font-weight: 700; width: 18px; height: 18px; border-radius: var(--radius-global); display: inline-flex; align-items: center; justify-content: center;">2</span>
+        </a>
+        <a href="login.html" class="btn btn-primary" id="nav-login-btn">Login</a>
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Open Navigation Menu">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE DRAWER -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <i class="ri-steering-2-fill"></i>
+        <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+      </a>
+      <button class="drawer-close-btn" id="drawer-close" aria-label="Close Navigation Drawer">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link"><i class="ri-home-4-line"></i> Home</a></li>
+      <li><a href="home2.html" class="drawer-link"><i class="ri-dashboard-2-line"></i> Home 2</a></li>
+      <li><a href="services.html" class="drawer-link active"><i class="ri-tools-line"></i> Services</a></li>
+      <li><a href="shop.html" class="drawer-link"><i class="ri-store-2-line"></i> Shop Catalog</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="ri-article-line"></i> Blog</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="ri-mail-line"></i> Contact</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><i class="ri-speed-up-line"></i> Dashboard</a></li>
+      <li><a href="login.html" class="drawer-link"><i class="ri-login-box-line"></i> Login</a></li>
+    </ul>
+    <div class="drawer-controls">
+      <div class="drawer-control-row">
+        <span>Dark / Light Mode</span>
+        <button class="btn-icon theme-toggle-btn" aria-label="Toggle Theme in Drawer">
+          <i class="ri-moon-line"></i>
+        </button>
+      </div>
+      <div class="drawer-control-row">
+        <span>Toggle RTL (⇄)</span>
+        <button class="btn-icon rtl-toggle-btn" aria-label="Toggle RTL in Drawer">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- PAGE HERO -->
+    <section class="section section-surface" style="padding-block: var(--space-8); text-align: center; border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-tag"><i class="ri-settings-4-line"></i> Precision Engineering Capabilities</div>
+        <h1 style="font-size: var(--size-h1); font-weight: var(--weight-h1); margin-bottom: var(--space-2);">Technical Automotive Services</h1>
+        <p class="lead" style="max-width: 650px; margin-inline: auto;">
+          In addition to our inventory of 180,000+ parts, our in-house engineering laboratory provides certified fitment verification, precision machining, and custom calibrations.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6 CORE SERVICES GRID (STEP 9.3) -->
+    <section class="section" id="services-list">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">What We Deliver</div>
+          <h2>Specialized Workshop Programs</h2>
+          <p>End-to-end technical support for individual track builders and commercial fleet operators.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="card">
+            <div class="card-icon"><i class="ri-check-double-line"></i></div>
+            <h3 class="card-title">100% Fitment Guarantee</h3>
+            <p class="card-text">We verify your Vehicle Identification Number (VIN) and engine code prior to order packaging. If an authorized part does not fit, we cover round-trip freight.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm">Request Verification</a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="card">
+            <div class="card-icon"><i class="ri-cpu-line"></i></div>
+            <h3 class="card-title">Custom ECU Bench Tuning</h3>
+            <p class="card-text">Send in your engine control unit for tailor-made calibration tables, ignition timing optimization, ethanol sensor scaling, and throttle remapping.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm">View Tuning Specs</a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="card">
+            <div class="card-icon"><i class="ri-equalizer-line"></i></div>
+            <h3 class="card-title">Cylinder Head Machining</h3>
+            <p class="card-text">5-axis CNC porting, precision valve seat cutting, and deck resurfacing for racing engine builds requiring airtight chamber seals.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm">Machining Schedule</a>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="card">
+            <div class="card-icon"><i class="ri-recycle-line"></i></div>
+            <h3 class="card-title">OEM Core Exchange Program</h3>
+            <p class="card-text">Exchange your worn brake calipers, steering racks, or turbos for remanufactured OEM assemblies with upfront credit rebates.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm">Core Value Lookup</a>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="card">
+            <div class="card-icon"><i class="ri-truck-line"></i></div>
+            <h3 class="card-title">Fleet Maintenance Supply</h3>
+            <p class="card-text">Custom wholesale accounts for corporate delivery fleets and racing teams with scheduled restock intervals and bulk volume pricing.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm">Corporate Accounts</a>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="card">
+            <div class="card-icon"><i class="ri-shield-star-line"></i></div>
+            <h3 class="card-title">Chassis Dyno Diagnostics</h3>
+            <p class="card-text">Comprehensive all-wheel-drive dyno testing to log air-fuel ratios, boost leaks, exhaust gas temperatures, and drivetrain losses.</p>
+            <a href="contact.html" class="btn btn-outline btn-sm">Book Dyno Session</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING & SERVICE COMPARISON TABLE (STEP 9.3) -->
+    <section class="section section-surface" id="pricing-comparison">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Transparent Tiers</div>
+          <h2>Service & Support Plans</h2>
+          <p>Choose the level of technical backing and warranty protection suited for your vehicle build.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table" aria-label="Service comparison table">
+            <thead>
+              <tr>
+                <th>Features & Capabilities</th>
+                <th style="text-align: center;">Standard DIY</th>
+                <th style="text-align: center; color: var(--color-accent);">Track Enthusiast</th>
+                <th style="text-align: center;">Pro Motorsport</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>VIN Fitment Verification</strong></td>
+                <td style="text-align: center;"><i class="ri-check-line" style="color: var(--color-success); font-size: 1.25rem;"></i></td>
+                <td style="text-align: center;"><i class="ri-check-line" style="color: var(--color-success); font-size: 1.25rem;"></i></td>
+                <td style="text-align: center;"><i class="ri-check-line" style="color: var(--color-success); font-size: 1.25rem;"></i></td>
+              </tr>
+              <tr>
+                <td><strong>Warranty Coverage</strong></td>
+                <td style="text-align: center;">1 Year Limited</td>
+                <td style="text-align: center; font-weight: 500; color: var(--color-accent);">3 Years Full Replacement</td>
+                <td style="text-align: center;">Lifetime Race Warranty</td>
+              </tr>
+              <tr>
+                <td><strong>Tech Hotline Access</strong></td>
+                <td style="text-align: center;">Email Support (24h)</td>
+                <td style="text-align: center;">Direct Phone & Chat</td>
+                <td style="text-align: center;">Dedicated Master Technician</td>
+              </tr>
+              <tr>
+                <td><strong>Shipping Dispatch</strong></td>
+                <td style="text-align: center;">Standard Ground</td>
+                <td style="text-align: center;">Priority 2-Day Air</td>
+                <td style="text-align: center;">Same-Day Emergency Courier</td>
+              </tr>
+              <tr>
+                <td><strong>Dyno Logs & Map File Backups</strong></td>
+                <td style="text-align: center;"><i class="ri-close-line" style="color: var(--color-error); font-size: 1.25rem;"></i></td>
+                <td style="text-align: center;"><i class="ri-check-line" style="color: var(--color-success); font-size: 1.25rem;"></i></td>
+                <td style="text-align: center;"><i class="ri-check-line" style="color: var(--color-success); font-size: 1.25rem;"></i></td>
+              </tr>
+              <tr>
+                <td><strong>Pricing</strong></td>
+                <td style="text-align: center; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 540;">Free with Order</td>
+                <td style="text-align: center; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 540; color: var(--color-accent);">$99 / Year</td>
+                <td style="text-align: center; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 540;">$349 / Year</td>
+              </tr>
+              <tr>
+                <td><strong>Action</strong></td>
+                <td style="text-align: center;"><a href="shop.html" class="btn btn-outline btn-sm">Select Standard</a></td>
+                <td style="text-align: center;"><a href="contact.html" class="btn btn-primary btn-sm">Upgrade to Track</a></td>
+                <td style="text-align: center;"><a href="contact.html" class="btn btn-secondary btn-sm">Enroll Pro Fleet</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="section-tag">Have a Custom Project?</div>
+          <h2>Consult Our Engineering Specialists</h2>
+          <p>Reach out to discuss customized camshaft profiles, bespoke billet suspension geometry, or high-compression piston specs.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg">Schedule Consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-1);">
+            <i class="ri-steering-2-fill"></i>
+            <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
+          </a>
+          <p style="font-size: var(--size-label);">Professional automotive services, certified fitment diagnostics, and OEM precision engineering.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="shop.html" class="footer-link">Shop Catalog</a></li>
+            <li><a href="blog.html" class="footer-link">Technical Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html?cat=engine" class="footer-link">Engine Parts</a></li>
+            <li><a href="shop.html?cat=brakes" class="footer-link">Brake Systems</a></li>
+            <li><a href="shop.html?cat=suspension" class="footer-link">Suspension & Steering</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Support</h4>
+          <p style="font-size: var(--size-caption);">Questions about core returns or dyno sessions?</p>
+          <div style="font-size: var(--size-label); color: var(--color-accent); font-weight: 500;">
+            <i class="ri-phone-line"></i> 1-800-555-AUTO
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Auto Parts Inc. All rights reserved. High-Performance Automotive E-Commerce Template.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
