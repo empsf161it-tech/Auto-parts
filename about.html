@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Auto Parts — Engineering Heritage & Precision Quality</title>
+  <title>About Auto Parts â€” Engineering Heritage & Precision Quality</title>
   <meta name="description" content="Learn about Auto Parts, our engineering background, our 14-year heritage in motorsport and aftermarket development, leadership team, and milestones.">
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f95716'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/></svg>">
@@ -30,7 +30,6 @@
           <li><a href="shop.html" class="nav-link">Shop</a></li>
           <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
         </ul>
       </nav>
 
@@ -72,8 +71,7 @@
       <li><a href="shop.html" class="drawer-link"><i class="ri-store-2-line"></i> Shop Catalog</a></li>
       <li><a href="blog.html" class="drawer-link"><i class="ri-article-line"></i> Blog</a></li>
       <li><a href="contact.html" class="drawer-link"><i class="ri-mail-line"></i> Contact</a></li>
-      <li><a href="dashboard.html" class="drawer-link"><i class="ri-speed-up-line"></i> Dashboard</a></li>
-      <li><a href="login.html" class="drawer-link"><i class="ri-login-box-line"></i> Login</a></li>
+      <li style="margin-top: var(--space-2); padding: 0 var(--space-2);"><a href="login.html" class="btn btn-primary" style="width: 100%; justify-content: center;"><i class="ri-login-box-line"></i> Login</a></li>
     </ul>
     <div class="drawer-controls">
       <div class="drawer-control-row">
@@ -83,7 +81,7 @@
         </button>
       </div>
       <div class="drawer-control-row">
-        <span>Toggle RTL (⇄)</span>
+        <span>Toggle RTL (â‡„)</span>
         <button class="btn-icon rtl-toggle-btn" aria-label="Toggle RTL in Drawer">
           <i class="ri-arrow-left-right-line"></i>
         </button>
@@ -247,13 +245,24 @@
   <footer class="site-footer" id="site-footer">
     <div class="container">
       <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
         <div class="footer-col">
           <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-1);">
             <i class="ri-steering-2-fill"></i>
             <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
           </a>
-          <p style="font-size: var(--size-label);">The trusted source for high-performance automotive engineering and genuine OEM parts.</p>
+          <p style="font-size: var(--size-label);">
+            Premier destination for original OEM replacements, performance tuning parts, and certified automotive engineering accessories.
+          </p>
+          <div style="display: flex; gap: var(--space-1); margin-top: var(--space-1);">
+            <a href="https://facebook.com" class="btn-icon" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+            <a href="https://twitter.com" class="btn-icon" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+            <a href="https://instagram.com" class="btn-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="https://youtube.com" class="btn-icon" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+          </div>
         </div>
+
+        <!-- Col 2: Navigation Links -->
         <div class="footer-col">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
@@ -262,26 +271,44 @@
             <li><a href="services.html" class="footer-link">Services</a></li>
             <li><a href="shop.html" class="footer-link">Shop Catalog</a></li>
             <li><a href="blog.html" class="footer-link">Technical Blog</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Support</a></li>
           </ul>
         </div>
+
+        <!-- Col 3: Product Categories -->
         <div class="footer-col">
           <h4 class="footer-heading">Categories</h4>
           <ul class="footer-links">
             <li><a href="shop.html?cat=engine" class="footer-link">Engine Parts</a></li>
             <li><a href="shop.html?cat=brakes" class="footer-link">Brake Systems</a></li>
             <li><a href="shop.html?cat=suspension" class="footer-link">Suspension & Steering</a></li>
+            <li><a href="shop.html?cat=batteries" class="footer-link">Batteries & Electrical</a></li>
+            <li><a href="shop.html?cat=lighting" class="footer-link">Performance Lighting</a></li>
+            <li><a href="shop.html?cat=tires-wheels" class="footer-link">Tires & Wheels</a></li>
           </ul>
         </div>
+
+        <!-- Col 4: Newsletter & Support -->
         <div class="footer-col">
-          <h4 class="footer-heading">Contact Support</h4>
-          <p style="font-size: var(--size-caption);">Talk directly with our mechanical support team.</p>
-          <div style="font-size: var(--size-label); color: var(--color-accent); font-weight: 500;">
-            <i class="ri-phone-line"></i> 1-800-555-AUTO
+          <h4 class="footer-heading">Garage Bulletin</h4>
+          <p style="font-size: var(--size-caption);">Subscribe for fitment releases, technical bulletins, and exclusive discount coupons.</p>
+          <form class="footer-newsletter-form" data-validate="true" data-success-msg="Subscribed successfully!">
+            <div class="form-field" style="flex: 1;">
+              <input type="email" class="form-control" placeholder="Enter your email" required aria-label="Email address for newsletter">
+              <span class="error-msg"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter"><i class="ri-send-plane-fill"></i></button>
+            <div class="form-feedback"></div>
+          </form>
+          <div style="font-size: var(--size-caption); color: var(--text-muted); margin-top: var(--space-1);">
+            <i class="ri-customer-service-fill" style="color: var(--color-accent);"></i> Support Hotline: 1-800-555-AUTO
           </div>
         </div>
       </div>
+
+      <!-- Copyright Centered (Step 10) -->
       <div class="footer-bottom">
-        <p>© 2026 Auto Parts Inc. All rights reserved. High-Performance Automotive E-Commerce Template.</p>
+        <p>Â© 2026 Auto Parts Inc. All rights reserved. High-Performance Automotive E-Commerce Template.</p>
       </div>
     </div>
   </footer>
@@ -289,3 +316,5 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+

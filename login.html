@@ -13,12 +13,22 @@
 </head>
 <body class="auth-body">
 
+  <!-- Top Right Toggles -->
+  <div style="position: absolute; top: var(--space-3); right: var(--space-3); display: flex; gap: var(--space-2); z-index: 10;">
+    <button class="btn-icon rtl-toggle-btn" aria-label="Toggle RTL Direction" title="Toggle RTL">
+      <i class="ri-arrow-left-right-line"></i>
+    </button>
+    <button class="btn-icon theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+      <i class="ri-moon-line"></i>
+    </button>
+  </div>
+
   <main class="auth-card" id="login-container">
     <!-- Brand Header -->
-    <div class="auth-brand">
+    <a href="index.html" class="auth-brand">
       <i class="ri-steering-2-fill"></i>
       <span>AUTO<span style="color: var(--color-accent);">PARTS</span></span>
-    </div>
+    </a>
     <h2>Welcome Back</h2>
     <p class="auth-subtext">Access your personal garage, fitment specs, and saved orders.</p>
 
@@ -31,12 +41,17 @@
       </div>
 
       <div class="form-field">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <label for="login-password" style="font-size: var(--size-caption); font-weight: 500;">Password *</label>
-          <a href="#" style="font-size: var(--size-caption); color: var(--color-accent);">Forgot?</a>
-        </div>
+        <label for="login-password" style="font-size: var(--size-caption); font-weight: 500;">Password *</label>
         <input type="password" id="login-password" name="password" class="form-control" placeholder="••••••••" required autocomplete="current-password">
         <span class="error-msg"></span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: -8px;">
+        <label style="display: flex; align-items: center; gap: 8px; font-size: var(--size-caption); cursor: pointer; color: var(--text-main);">
+          <input type="checkbox" name="remember" style="accent-color: var(--color-accent); width: 14px; height: 14px;">
+          Remember me
+        </label>
+        <a href="#" style="font-size: var(--size-caption); color: var(--color-accent);">Forgot?</a>
       </div>
 
       <!-- Primary Login Button labeled exactly 'Login' per Step 9.7 -->

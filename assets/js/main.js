@@ -397,6 +397,30 @@
     setInterval(update, 1000);
   }
 
+  // --- BACK TO TOP BUTTON ---
+  function initBackToTop() {
+    const btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.innerHTML = '<i class="ri-arrow-up-line"></i>';
+    btn.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        btn.classList.add('show');
+      } else {
+        btn.classList.remove('show');
+      }
+    });
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
   // --- INITIALIZE ALL ON DOM READY ---
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
@@ -406,5 +430,6 @@
     initCartSimulator();
     initFormValidation();
     initCountdown();
+    initBackToTop();
   });
 })();
