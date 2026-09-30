@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    AUTO PARTS - MAIN JAVASCRIPT SYSTEM
    Handles Theme Toggle, RTL Support, Mobile Drawer, Sticky Nav, Form Validation,
    Vehicle Selector, Cart Interactivity, and Animations.
@@ -399,11 +399,8 @@
 
   // --- BACK TO TOP BUTTON ---
   function initBackToTop() {
-    const btn = document.createElement('button');
-    btn.className = 'back-to-top';
-    btn.innerHTML = '<i class="ri-arrow-up-line"></i>';
-    btn.setAttribute('aria-label', 'Back to top');
-    document.body.appendChild(btn);
+    const btn = document.getElementById('back-to-top');
+    if (!btn) return;
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
@@ -433,3 +430,4 @@
     initBackToTop();
   });
 })();
+
